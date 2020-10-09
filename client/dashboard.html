@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Police du site -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <title>DASHBOARD - NODE + MYSQL CRUD</title>
+</head>
+
+<body>
+    <main>
+        <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filtrer par mots-clés">
+
+        <input placeholder="Recherche par titre" id="search-input">
+
+        <button id="search-btn">Rechercher</button>
+
+        <table id="table" class="order-table table">
+            <thead>
+                <!--<th>ID</th>-->
+                <th style="min-width: 100px;">Titre</th>
+                <th>Article</th>
+                <th>Image</th>
+                <th>Date d'ajout</th>
+                <!--<th>Delete</th>
+                        <th>Edit</th>-->
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <section hidden id="update-row">
+
+            <h3>Mettre à jour</h3>
+
+            <input type="text" id="update-name-input" placeholder="Titre" />
+
+            <textarea type="text" id="update-descriptions-input" placeholder="Article"></textarea>
+
+            <input type="text" id="update-images-input" placeholder="URL de l'image" />
+
+            <button id="update-row-btn">CONFIRMER</button>
+
+        </section>
+
+        <h3>Ajouter</h3>
+
+        <input type="text" id="name-input" placeholder="Titre" />
+
+        <textarea type="text" id="descriptions-input" placeholder="Article"></textarea>
+
+        <input type="text" id="images-input" placeholder="URL de l'image" />
+
+        <button id="add-name-btn">AJOUTER</button>
+
+    </main>
+
+    <script src="crud.js"></script>
+    
+</body>
+
+</html>
